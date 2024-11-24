@@ -32,31 +32,31 @@ jobs:
 
       - name: Get information Alpine
         id: info_alpine
-        uses: home-assistant/actions/helpers/info@master
+        uses: home-asst/actions/helpers/info@master
         with:
           path: "${{ github.workspace }}/alpine"
 
       - name: Get information Debian
         id: info_debian
-        uses: home-assistant/actions/helpers/info@master
+        uses: home-asst/actions/helpers/info@master
         with:
           path: "${{ github.workspace }}/debian"
 
       - name: Get information Ubuntu
         id: info_ubuntu
-        uses: home-assistant/actions/helpers/info@master
+        uses: home-asst/actions/helpers/info@master
         with:
           path: "${{ github.workspace }}/ubuntu"
 
       - name: Get information Raspbian
         id: info_raspbian
-        uses: home-assistant/actions/helpers/info@master
+        uses: home-asst/actions/helpers/info@master
         with:
           path: "${{ github.workspace }}/raspbian"
 
       - name: Get version
         id: version
-        uses: home-assistant/actions/helpers/version@master
+        uses: home-asst/actions/helpers/version@master
         with:
           type: ${{ env.BUILD_TYPE }}
 
@@ -94,7 +94,7 @@ jobs:
           fi
 
       - name: Build base image
-        uses: home-assistant/builder@2024.08.2
+        uses: home-asst/builder@2024.08.2
         with:
           args: |
             $BUILD_ARGS \
@@ -138,7 +138,7 @@ jobs:
           fi
 
       - name: Build base image
-        uses: home-assistant/builder@2024.08.2
+        uses: home-asst/builder@2024.08.2
         with:
           args: |
             $BUILD_ARGS \
@@ -183,7 +183,7 @@ jobs:
           fi
 
       - name: Build base image
-        uses: home-assistant/builder@2024.08.2
+        uses: home-asst/builder@2024.08.2
         with:
           args: |
             $BUILD_ARGS \
@@ -227,7 +227,7 @@ jobs:
           fi
 
       - name: Build base image
-        uses: home-assistant/builder@2024.08.2
+        uses: home-asst/builder@2024.08.2
         with:
           args: |
             $BUILD_ARGS \
@@ -273,7 +273,7 @@ jobs:
           fi
 
       - name: Build base image
-        uses: home-assistant/builder@2024.08.2
+        uses: home-asst/builder@2024.08.2
         with:
           args: |
             $BUILD_ARGS \

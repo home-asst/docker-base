@@ -2,7 +2,7 @@ name: Build base images
 
 on:
   pull_request:
-    branches: ["master"]
+    branches: ["next"]
   release:
     types: ["published"]
 
@@ -32,31 +32,31 @@ jobs:
 
       - name: Get information Alpine
         id: info_alpine
-        uses: home-asst/actions/helpers/info@master
+        uses: home-asst/actions/helpers/info@next
         with:
           path: "${{ github.workspace }}/alpine"
 
       - name: Get information Debian
         id: info_debian
-        uses: home-asst/actions/helpers/info@master
+        uses: home-asst/actions/helpers/info@next
         with:
           path: "${{ github.workspace }}/debian"
 
       - name: Get information Ubuntu
         id: info_ubuntu
-        uses: home-asst/actions/helpers/info@master
+        uses: home-asst/actions/helpers/info@next
         with:
           path: "${{ github.workspace }}/ubuntu"
 
       - name: Get information Raspbian
         id: info_raspbian
-        uses: home-asst/actions/helpers/info@master
+        uses: home-asst/actions/helpers/info@next
         with:
           path: "${{ github.workspace }}/raspbian"
 
       - name: Get version
         id: version
-        uses: home-asst/actions/helpers/version@master
+        uses: home-asst/actions/helpers/version@next
         with:
           type: ${{ env.BUILD_TYPE }}
 
